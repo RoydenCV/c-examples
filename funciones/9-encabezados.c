@@ -1,21 +1,7 @@
 #include <stdio.h>
 #include "9-encabezados.h"
 
-int main() {
 
-    int v;
-
-    // Llama a las 3 funciones
-    funcion1();
-    funcion2(5, 2.67);
-    v = funcion3(10);
-
-    // Imprime el valor que retornó funcion3()
-    printf("v = %d\n", v);
-
-    return 0;
-
-}
 
 // funcion1(): Imprime un mensaje
 void funcion1() {
@@ -36,9 +22,34 @@ int funcion3(int x) {
     return y;
 }
 
+// funcion5(): Imprime un mensaje. Retorna el valor que recibió como argumento
+// incrementado 
 int funcion5(int x) {
-    printf("en funcion5");
-int funcion4(int x) {
-    printf("En funcion4()");
-    return x;
+    printf("En funcion5()...\n");
+    int w = x + 8;
+    return w;
+}
+
+
+
+
+// despliegue de informacion 
+
+int main() {
+
+    int v;
+    int w;
+
+    // Llama a las 3 funciones
+    funcion1();
+    funcion2(5, 2.67);
+    v = funcion3(10);
+    w = funcion5(10);
+
+    // Imprime el valor que retornó funcion3()
+    printf("v = %d\n", v);
+    printf("w = %d\n", w);
+
+    return 0;
+
 }
